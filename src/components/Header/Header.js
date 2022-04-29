@@ -15,7 +15,7 @@ const Header = () => {
                         <Nav>
                             <Nav.Link as={Link} to='/home'> <button type="button" class="btn btn-link text-decoration-none text-white fw-bold">Home</button></Nav.Link>
                             <Nav.Link href="#deets"> <button type="button" class="btn btn-link text-decoration-none text-white fw-bold ">Blogs</button></Nav.Link>
-                            <Nav.Link href="#memes">
+                            <Nav.Link as={Link} to="/login">
                                 <button type="button" class="btn btn-link text-decoration-none text-white fw-bold ">Log In</button>
                             </Nav.Link>
                         </Nav>
