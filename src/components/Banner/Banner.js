@@ -1,10 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Banner.css';
-import slider1 from '../../Images/slider17.webp';
-import slider2 from '../../Images/slider20.jpg';
-import slider3 from '../../Images/slider21.jpg';
-import slider4 from '../../Images/slider15.jfif';
+import slider1 from '../../Images/slider20.jpg';
+import slider2 from '../../Images/slider3.jpg';
+import slider3 from '../../Images/slider15.jfif';
 
 const Banner = () => {
     return (
@@ -13,7 +12,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 slider"
-                        src={slider2}
+                        src={slider1}
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -24,7 +23,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 slider"
-                        src={slider4}
+                        src={slider2}
                         alt="Second slide"
                     />
 
