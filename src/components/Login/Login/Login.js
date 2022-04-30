@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import loginImages1 from '../../../Images/loginImages.jpg';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {
     const [
         signInWithEmailAndPassword,
@@ -71,7 +72,8 @@ const Login = () => {
                     </Form>
                     <p className='mx-auto mt-2 '>{errorMessage}</p>
                     <p className='mx-auto mt-3 w-50'>Don't have account?  <Link to='/register' className='text-danger text-decoration-none pe-auto'> Please Register</Link></p>
-                    <p className='mx-auto mt-3 w-50'>Forget password?  <button className='btn btn-link text-danger text-decoration-none pe-auto' onClick={resetPassword}>Reset Password</button></p>
+                    <p className='mx-auto mt-3 w-50'>Forget password?  <h5 className='btn btn-link text-danger text-decoration-none pe-auto bg-none' onClick={resetPassword}>Reset Password</h5></p>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>
