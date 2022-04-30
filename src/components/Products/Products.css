@@ -4,6 +4,10 @@
     grid-gap: 20px;
 }
 
+.product-details {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
 
 
 

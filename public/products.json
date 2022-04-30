@@ -2,7 +2,7 @@
     {
         "_id": "626cf51d0c84743c99047180",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/qjSxZX6/orange.jpg",
         "description": "lorem ipsum",
         "quantity": 5,
         "price": 75,
@@ -11,7 +11,7 @@
     {
         "_id": "626cf51dc52912541e62de0a",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/b5F22GF/banana.jpg",
         "description": "lorem ipsum",
         "quantity": 1,
         "price": 83,
@@ -20,7 +20,7 @@
     {
         "_id": "626cf51d3494e0375eb02edc",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/4RcLYdd/kajor.webp",
         "description": "lorem ipsum",
         "quantity": 10,
         "price": 117,
@@ -29,7 +29,7 @@
     {
         "_id": "626cf51d8a790ba006763243",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/qYFj0bp/dragon.webp",
         "description": "lorem ipsum",
         "quantity": 5,
         "price": 143,
@@ -38,7 +38,7 @@
     {
         "_id": "626cf51dbe91bb46df7d1337",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/YT04ZN1/lychee.jpg",
         "description": "lorem ipsum",
         "quantity": 5,
         "price": 101,
@@ -47,7 +47,7 @@
     {
         "_id": "626cf51da0fc55f49f43eb49",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/2FY3yNm/mango.jpg",
         "description": "lorem ipsum",
         "quantity": 10,
         "price": 93,
@@ -56,7 +56,7 @@
     {
         "_id": "626cf51d95509c73307348e0",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/q7S9jhF/labo.jpg",
         "description": "lorem ipsum",
         "quantity": 3,
         "price": 147,
@@ -65,7 +65,7 @@
     {
         "_id": "626cf51db43926722a9313ea",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/CBDSxLG/shiny.jpg",
         "description": "lorem ipsum",
         "quantity": 5,
         "price": 70,
@@ -74,7 +74,7 @@
     {
         "_id": "626cf51d091917651ff0cee4",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/Zx94SMc/piniple.jpg",
         "description": "lorem ipsum",
         "quantity": 4,
         "price": 93,
@@ -83,7 +83,7 @@
     {
         "_id": "626cf51d37e7c78da9433251",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/4gGsqWB/watermalon.jpg",
         "description": "lorem ipsum",
         "quantity": 3,
         "price": 135,
@@ -92,7 +92,7 @@
     {
         "_id": "626cf51d90b03d09bfe869cd",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/D7PvnS9/promiganate.jpg",
         "description": "lorem ipsum",
         "quantity": 9,
         "price": 101,
@@ -101,7 +101,7 @@
     {
         "_id": "626cf554e38425313f2a1ba2",
         "name": "hello",
-        "picture": "http://placehold.it/32x32",
+        "picture": "https://i.ibb.co/VLyNSVZ/papaya.jpg",
         "description": "lorem ipsum",
         "quantity": 9,
         "price": 141,
