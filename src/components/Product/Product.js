@@ -14,7 +14,6 @@ const Product = ({ product }) => {
                 <p>suplaire : {supplierName}</p>
                 <Button variant="warning" className='w-100 text-white'>Update</Button>
             </div>
-
         </div>
     );
 };

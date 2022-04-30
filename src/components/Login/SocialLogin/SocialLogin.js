@@ -34,7 +34,7 @@ const SocialLogin = () => {
             </div>
             <p className='text-center'>{errorMessage}</p>
             <div>
-                <Button variant="outline-warning" className='btn text-warnign w-50 d-block mx-auto my-1 google-btn' onClick={() => signInWithGoogle()}><img style={{ width: "30px" }} src={googlelogo} alt="" /><span className='px-2'>Google Sign In</span></Button>
+                <Button variant="outline-warning" className='btn text-warnign w-50 d-block mx-auto my-1 google-btn rounded-pill' onClick={() => signInWithGoogle()}><img style={{ width: "30px" }} src={googlelogo} alt="" /><span className='px-2'>Google Sign In</span></Button>
             </div>
         </div>
     );

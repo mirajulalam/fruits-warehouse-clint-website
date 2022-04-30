@@ -21,7 +21,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} to='/home'> <button type="button" className="btn btn-link text-decoration-none text-white fw-bold">Home</button></Nav.Link>
-                            <Nav.Link href="#deets"> <button type="button" className="btn btn-link text-decoration-none text-white fw-bold ">Blogs</button></Nav.Link>
+                            <Nav.Link as={Link} to='/blogs'> <button type="button" className="btn btn-link text-decoration-none text-white fw-bold ">Blogs</button></Nav.Link>
                             {user && <>
                                 <Nav.Link as={Link} to="/login">
                                     <button type="button" className="btn btn-link text-decoration-none text-white fw-bold ">Manage Item</button>
