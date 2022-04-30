@@ -39,34 +39,37 @@ const Register = () => {
 
     }
     return (
-        <div className='login-section'>
-            <div>
-                <img className='w-100' src={loginImages} alt="" />
-            </div>
-            <div>
-                <Form onSubmit={handleRegister} className='w-50 mx-auto'>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Your name</Form.Label>
-                        <Form.Control name='name' type="text" placeholder="Your name" required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control name='email' type="email" placeholder="Enter email" required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control name='password' type="password" placeholder="Password" required />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control name='confirmPassword' type="password" placeholder="Confirm Password" required />
-                    </Form.Group>
+        <div className='login-section container'>
+            <div className="row">
+                <div className='col-sm-12 col-md-6 mt-5'>
+                    <img className='w-100 h-100' src={loginImages} alt="" />
+                </div>
+                <div className='col-sm-12 col-md-6 mt-5'>
+                    <h1 className='text-center'>Register</h1>
+                    <Form onSubmit={handleRegister} className='w-50 mx-auto'>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Your name</Form.Label>
+                            <Form.Control name='name' type="text" placeholder="Your name" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control name='email' type="email" placeholder="Enter email" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control name='password' type="password" placeholder="Password" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control name='confirmPassword' type="password" placeholder="Confirm Password" required />
+                        </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
-                <p className='mx-auto w-50 mt-3'>Already have an account?  <Link to='/login' className='text-danger text-decoration-none pe-auto'> Please Login</Link></p>
+                        <Button variant="warning" type="submit" className='text-white btn-submit'>
+                            Submit
+                        </Button>
+                    </Form>
+                    <p className='mx-auto w-50 mt-3'>Already have an account?  <Link to='/login' className='text-danger text-decoration-none pe-auto'> Please Login</Link></p>
+                </div>
             </div>
         </div>
     );
