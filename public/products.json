@@ -1,108 +1,108 @@
 [
     {
         "_id": "626cf51d0c84743c99047180",
-        "name": "hello",
+        "name": "Orange",
         "picture": "https://i.ibb.co/qjSxZX6/orange.jpg",
-        "description": "lorem ipsum",
+        "description": "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.",
         "quantity": 5,
         "price": 75,
         "supplierName": "Pearlie Mcdowell"
     },
     {
         "_id": "626cf51dc52912541e62de0a",
-        "name": "hello",
+        "name": "Banana",
         "picture": "https://i.ibb.co/b5F22GF/banana.jpg",
-        "description": "lorem ipsum",
+        "description": "A banana is a curved, yellow fruit with a thick skin and soft sweet flesh. If you eat a banana every day for breakfast, your roommate might nickname you the monkey. A banana is a tropical fruit that's quite popular all over the world. It grows in bunches on a banana tree.",
         "quantity": 1,
         "price": 83,
         "supplierName": "Christi Puckett"
     },
     {
         "_id": "626cf51d3494e0375eb02edc",
-        "name": "hello",
+        "name": "Date palm",
         "picture": "https://i.ibb.co/4RcLYdd/kajor.webp",
-        "description": "lorem ipsum",
+        "description": "Dates, the fruits of the date palm tree (Phoenix dactylifera L.), are a major staple food in arid areas of North Africa and the Middle East, and the date crop plays a central role in the economy and social life of these regions (Janick et al., 2008; Botes et al., 2002; El-Deek et al., 2010). There are more than 3000 date varieties in the world.",
         "quantity": 10,
         "price": 117,
         "supplierName": "Marcella Richardson"
     },
     {
         "_id": "626cf51d8a790ba006763243",
-        "name": "hello",
+        "name": "Dragon",
         "picture": "https://i.ibb.co/qYFj0bp/dragon.webp",
-        "description": "lorem ipsum",
+        "description": "Dragon fruit may look exotic, but its flavors are similar to other fruits. Its taste has been described as a slightly sweet cross between a kiwi and a pear. Dragon fruit is a tropical fruit native to Mexico and Central America. Its taste is like a combination of a kiwi and a pear.",
         "quantity": 5,
         "price": 143,
         "supplierName": "Mcgowan Ross"
     },
     {
         "_id": "626cf51dbe91bb46df7d1337",
-        "name": "hello",
+        "name": "Litchi",
         "picture": "https://i.ibb.co/YT04ZN1/lychee.jpg",
-        "description": "lorem ipsum",
+        "description": "Lychee is also known as alligator strawberry for its red, bumpy skin. Lychees are round or oblong in shape and are 1 ½ to 2 inches in diameter. Their opaque white flesh is fragrant and sweet, with floral notes.",
         "quantity": 5,
         "price": 101,
         "supplierName": "Monica Cantu"
     },
     {
         "_id": "626cf51da0fc55f49f43eb49",
-        "name": "hello",
+        "name": "Mango",
         "picture": "https://i.ibb.co/2FY3yNm/mango.jpg",
-        "description": "lorem ipsum",
+        "description": "Many people describe ripe mangoes as having a tropical floral taste while others describe them as more citrusy and tart. Ripe mangoes are juicy, somewhat stringy, and sweet with underlying hints of sourness and pine.",
         "quantity": 10,
         "price": 93,
         "supplierName": "Lynch Pratt"
     },
     {
         "_id": "626cf51d95509c73307348e0",
-        "name": "hello",
+        "name": "Lemon",
         "picture": "https://i.ibb.co/q7S9jhF/labo.jpg",
-        "description": "lorem ipsum",
+        "description": "The lemon is a round, slightly elongated fruit, it has a strong and resistant skin, with an intense bright yellow colour when it is totaly ripe, giving off a special aroma when it is cut. The pulp is pale yellow, juicy and acid, divided in gores.",
         "quantity": 3,
         "price": 147,
         "supplierName": "Nanette Oconnor"
     },
     {
         "_id": "626cf51db43926722a9313ea",
-        "name": "hello",
+        "name": "Cherry",
         "picture": "https://i.ibb.co/CBDSxLG/shiny.jpg",
-        "description": "lorem ipsum",
+        "description": "The fruit is a fleshy drupe (stone fruit) that is generally heart-shaped to nearly globular, about 2 cm (1 inch) in diameter, and varies in colour from yellow through red to nearly black. The acid content of the sweet cherry is low. The higher acid content of the sour cherry produces its characteristic tart flavour",
         "quantity": 5,
         "price": 70,
         "supplierName": "Mills George"
     },
     {
         "_id": "626cf51d091917651ff0cee4",
-        "name": "hello",
+        "name": "Pineapple",
         "picture": "https://i.ibb.co/Zx94SMc/piniple.jpg",
-        "description": "lorem ipsum",
+        "description": "Really ripe pineapple is incredibly sweet and fruity, tasting something like a marriage of citrus and apple. What is this? There's a tang to pineapple that may be relatively absent from the ripest fruit and bolder in less ripe pineapples. It's similar to the tang of an orange, zesty and bright.",
         "quantity": 4,
         "price": 93,
         "supplierName": "Mccarthy Simon"
     },
     {
         "_id": "626cf51d37e7c78da9433251",
-        "name": "hello",
+        "name": "Watermelon",
         "picture": "https://i.ibb.co/4gGsqWB/watermalon.jpg",
-        "description": "lorem ipsum",
+        "description": "Watermelon can easily be called the “iconic fruit of summer” with its bright pink rind, striped green exterior and dark seeds speckled throughout it just screams summer. The flavour of this summer time fruit is fresh, green and fruity with cucumber notes.",
         "quantity": 3,
         "price": 135,
         "supplierName": "Eula Wood"
     },
     {
         "_id": "626cf51d90b03d09bfe869cd",
-        "name": "hello",
+        "name": "Promegranate",
         "picture": "https://i.ibb.co/D7PvnS9/promiganate.jpg",
-        "description": "lorem ipsum",
+        "description": "The fruit is the size of a large orange, obscurely six-sided, with a smooth leathery skin that ranges from brownish yellow to red; within, it is divided into several chambers containing many thin transparent arils of reddish, juicy pulp, each surrounding an angular elongated seed.",
         "quantity": 9,
         "price": 101,
         "supplierName": "Goldie Sims"
     },
     {
         "_id": "626cf554e38425313f2a1ba2",
-        "name": "hello",
+        "name": "Papaya",
         "picture": "https://i.ibb.co/VLyNSVZ/papaya.jpg",
-        "description": "lorem ipsum",
+        "description": "Papaya is a tropical fruit, having oval or pear shape, measuring between 10 and 20cm and usually weighing between 500 and 1,000g, although it may even weigh up to 5kg. It is a berry of thin skin, of a green yellowish and orange colour. The pulp is of a red orange or yellow colour, sweet and very juicy.",
         "quantity": 9,
         "price": 141,
         "supplierName": "Bruce Baxter"

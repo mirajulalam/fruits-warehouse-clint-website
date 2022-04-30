@@ -5,6 +5,7 @@ import auth from '../../../firebase.init';
 import './SocialLogin.css';
 import googlelogo from '../../../Images/social1.png';
 import Loading from '../../Loading/Loading';
+import { Button } from 'react-bootstrap';
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
@@ -33,9 +34,7 @@ const SocialLogin = () => {
             </div>
             <p className='text-center'>{errorMessage}</p>
             <div>
-                <button onClick={() => signInWithGoogle()}
-                    className='btn btn-warning text-white w-50 d-block mx-auto my-2 google-btn'
-                ><img style={{ width: "30px" }} src={googlelogo} alt="" /><span className='px-2'>Google Sign In</span></button>
+                <Button variant="outline-warning" className='btn text-warnign w-50 d-block mx-auto my-1 google-btn' onClick={() => signInWithGoogle()}><img style={{ width: "30px" }} src={googlelogo} alt="" /><span className='px-2'>Google Sign In</span></Button>
             </div>
         </div>
     );
