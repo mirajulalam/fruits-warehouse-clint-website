@@ -56,7 +56,6 @@ const Login = () => {
     return (
         <div className='login-section container'>
             <div className="row">
-
                 <div className='col-sm-12 col-md-6 mt-5'>
                     <img className='w-100 h-100' src={loginImages1} alt="" />
                 </div>
@@ -75,9 +74,9 @@ const Login = () => {
                             Submit
                         </Button>
                     </Form>
-                    <p className='mx-auto mt-2 '>{errorMessage}</p>
+                    <p className='mx-auto w-50 mt-2 '>{errorMessage}</p>
                     <p className='mx-auto mt-3 w-50'>Don't have account?  <Link to='/register' className='text-danger text-decoration-none pe-auto'> Please Register</Link></p>
-                    <p className='mx-auto mt-3 w-50'>Forget password?  <h5 className='btn btn-link text-danger text-decoration-none pe-auto bg-none' onClick={resetPassword}>Reset Password</h5></p>
+                    <p className='mx-auto mt-3 w-50'>Forget password?   <h5 className='btn btn-link text-danger text-decoration-none pe-auto bg-none' onClick={resetPassword}>Reset Password</h5></p>
                     <SocialLogin></SocialLogin>
                 </div>
             </div>
