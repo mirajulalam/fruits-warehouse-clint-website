@@ -4,11 +4,16 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './SocialLogin.css';
 import googlelogo from '../../../Images/social1.png';
+import Loading from '../../Loading/Loading';
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+    if (loading) {
+        return <Loading></Loading>
+    }
     let errorMessage;
     if (error) {
         errorMessage = <p className='text-danger'>Error: {error?.message}</p>

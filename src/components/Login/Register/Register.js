@@ -4,9 +4,9 @@ import loginImages from '../../../Images/loginImages.jpg';
 import { Button, Form } from 'react-bootstrap';
 import auth from './../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
-
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import Loading from '../../Loading/Loading';
 const Register = () => {
     const [
         createUserWithEmailAndPassword,
@@ -15,6 +15,9 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
+    if (loading) {
+        return <Loading></Loading>
+    }
     if (error) {
         return (
             <div>
