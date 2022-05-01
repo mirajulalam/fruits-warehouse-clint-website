@@ -5,8 +5,8 @@
     margin: 20 0px;
 }
 
-.product-details {
-    border: 1px solid gray;
+.product-details:hover {
+    box-shadow: 5px 0px 5px 5px gray;
     border-radius: 5px;
 }
 

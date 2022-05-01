@@ -1,19 +1,38 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Card, CardGroup } from 'react-bootstrap';
 import './Product.css';
+import { useNavigate } from 'react-router-dom';
 const Product = ({ product }) => {
-    const { name, supplierName, picture, description, quantity } = product;
-
+    const { _id, name, supplierName, picture, description, quantity, price } = product;
+    const navigate = useNavigate();
+    const handleNavigateParames = (id) => {
+        navigate(`/product/${id}`)
+    }
     return (
         <div className='product-details'>
-            <img className='w-100' src={picture} alt="" />
-            <div className="product-info">
-                <h1>name: {name}</h1>
-                <p>{description}</p>
-                <p>{quantity}</p>
-                <p>suplaire : {supplierName}</p>
-                <Button variant="warning" className='w-100 text-white'>Update</Button>
-            </div>
+            <CardGroup>
+                <Card>
+                    <Card.Img variant="top" src={picture} />
+                    <Card.Body>
+                        <Card.Title>{name}</Card.Title>
+                        <Card.Text>
+                            {description}
+                        </Card.Text>
+                        <Card.Text>
+                            {supplierName}
+                        </Card.Text>
+                        <Card.Text>
+                            ${price}
+                        </Card.Text>
+                        <Card.Text>
+                            {quantity}
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer className='text-center bg-warning'>
+                        <button onClick={() => handleNavigateParames(_id)} className='w-100 border-0 bg-warning fw-bold text-white fs-5 update-button'>Update</button>
+                    </Card.Footer>
+                </Card>
+            </CardGroup>
         </div>
     );
 };
