@@ -14,18 +14,18 @@ const Product = ({ product }) => {
                 <Card>
                     <Card.Img variant="top" src={picture} />
                     <Card.Body>
-                        <Card.Title>{name}</Card.Title>
+                        <Card.Title>Name: {name}</Card.Title>
                         <Card.Text>
                             {description}
                         </Card.Text>
                         <Card.Text>
-                            {supplierName}
+                            SupplierName: {supplierName}
                         </Card.Text>
                         <Card.Text>
-                            ${price}
+                            Price: ${price}
                         </Card.Text>
                         <Card.Text>
-                            {quantity}
+                            Quantity: {quantity}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer className='text-center bg-warning'>
