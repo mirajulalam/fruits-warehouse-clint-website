@@ -18,23 +18,25 @@ const ProductDetails = () => {
     }, []);
 
     const handleUpdatQuantity = () => {
-        const updateQuantity = parseInt(quantity) - 1;
-        const currentQuantity = { ...products, quantity: updateQuantity }
-        console.log(currentQuantity);
-
+        console.log('update');
+    }
+    const handleQuantity = (event) => {
+        event.preventDefault();
+        const newQuantity = event.target.quantity.value;
+        const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
+        console.log(updatedQuantity);
         const url = `http://localhost:7000/products/${productId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(currentQuantity)
+            body: JSON.stringify({ updatedQuantity })
         })
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('Quantity update successfully')
-                setProducts(currentQuantity)
+                alert('update user')
             })
     }
     return (
@@ -54,11 +56,15 @@ const ProductDetails = () => {
                         <Card.Text>
                             Quantity:  {products.quantity}
                         </Card.Text>
-                        {products.quantity === null ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity(products._id)} variant="primary" className='bg-warning border-0'>Delivered</Button>}
+                        {products.quantity === null ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity()} variant="primary" className='bg-warning border-0'>Delivered</Button>}
                     </Card.Body>
                 </Card>
             </div>
             <div className='text-center'>
+                <form onSubmit={handleQuantity}>
+                    <input type="number" name="quantity" id="" />
+                    <input type="submit" value="Add item" className='bg-warning border-0 text-white p-1 ms-1 border-rounded' />
+                </form>
                 <Link to='/manageItem'><Button variant="warning" className='text-white'>Manage Item</Button></Link>
             </div>
         </>

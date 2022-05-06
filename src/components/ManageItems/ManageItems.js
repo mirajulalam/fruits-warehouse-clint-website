@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AllProducts from '../AllProducts/AllProducts';
 import './Manageitems.css';
-import { Button } from 'react-bootstrap';
 const ManageItems = () => {
     const [manageitem, setManageitem] = useState([]);
     useEffect(() => {
@@ -18,6 +18,9 @@ const ManageItems = () => {
                         manages={manages}
                     ></AllProducts>)
                 }
+            </div>
+            <div className='text-center my-3'>
+                <Link to='/additem'><button className='bg-warning border-0 text-white p-2 rounded fw-bold'>Add new Item</button></Link>
             </div>
         </div>
     );

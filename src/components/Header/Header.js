@@ -26,10 +26,10 @@ const Header = () => {
                                 <Nav.Link as={Link} to="/manageItem">
                                     <button type="button" className="btn  text-decoration-none text-white fw-bold ">Manage Item</button>
                                 </Nav.Link>
-                                <Nav.Link as={Link} to="/login">
+                                <Nav.Link as={Link} to="/additem">
                                     <button type="button" className="btn  text-decoration-none text-white fw-bold ">Add Item</button>
                                 </Nav.Link>
-                                <Nav.Link as={Link} to="/login">
+                                <Nav.Link as={Link} to="/myitem">
                                     <button type="button" className="btn  text-decoration-none text-white fw-bold ">My Item</button>
                                 </Nav.Link>
                             </>}

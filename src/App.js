@@ -11,6 +11,8 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import Footer from './components/Footer/Footer'
 import ManageItems from './components/ManageItems/ManageItems';
+import AddItem from './components/AddItem/AddItem';
+import MyItem from './components/MyItem/MyItem';
 function App() {
   return (
     <div>
@@ -25,6 +27,8 @@ function App() {
         }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path="/manageItem" element={<ManageItems></ManageItems>}></Route>
+        <Route path='/additem' element={<AddItem></AddItem>}></Route>
+        <Route path='/myitem' element={<MyItem></MyItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
