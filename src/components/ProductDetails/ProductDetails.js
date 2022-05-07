@@ -13,7 +13,7 @@ const ProductDetails = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [productId]);
+    }, [products]);
 
     const handleUpdatQuantity = () => {
         console.log('update');
@@ -21,8 +21,7 @@ const ProductDetails = () => {
     const handleQuantity = (event) => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
-        const updatedQuantity = newQuantity;
-        // const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
+        const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
         console.log(updatedQuantity);
         const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
         console.log(updatedQuantity)
