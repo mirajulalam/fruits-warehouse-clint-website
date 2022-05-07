@@ -7,15 +7,13 @@ const ProductDetails = () => {
     const { productId } = useParams();
     const [products, setProducts] = useState({});
     const { quantity } = products;
-    console.log(products);
-    console.log(quantity);
 
     useEffect(() => {
-        const url = `http://localhost:7000/products/${productId}`;
+        const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, []);
+    }, [productId]);
 
     const handleUpdatQuantity = () => {
         console.log('update');
@@ -23,20 +21,22 @@ const ProductDetails = () => {
     const handleQuantity = (event) => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
-        const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
+        const updatedQuantity = newQuantity;
+        // const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
         console.log(updatedQuantity);
-        const url = `http://localhost:7000/products/${productId}`;
+        const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
+        console.log(updatedQuantity)
         fetch(url, {
-            method: 'PUT',
+            method: "PUT",
             headers: {
-                'content-type': 'application/json'
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({ updatedQuantity })
         })
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('update user')
+                alert('update product')
             })
     }
     return (
@@ -63,9 +63,9 @@ const ProductDetails = () => {
             <div className='text-center'>
                 <form onSubmit={handleQuantity}>
                     <input type="number" name="quantity" id="" />
-                    <input type="submit" value="Add item" className='bg-warning border-0 text-white p-1 ms-1 border-rounded' />
+                    <input type="submit" value="Add item" className='bg-warning border-0 text-white p-1 ms-1 rounded' />
                 </form>
-                <Link to='/manageItem'><Button variant="warning" className='text-white'>Manage Item</Button></Link>
+                <Link to='/manageItem'><Button variant="warning" className='text-white my-2'>Manage Item</Button></Link>
             </div>
         </>
     );

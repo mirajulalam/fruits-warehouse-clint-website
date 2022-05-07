@@ -7,7 +7,7 @@ const AllProducts = ({ manages }) => {
     const handleProductDelete = id => {
         const checkout = window.confirm('Are you sure you want to delete products');
         if (checkout) {
-            const url = `http://localhost:7000/products/${id}`;
+            const url = `https://gentle-hollows-65771.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: "DELETE",
             })

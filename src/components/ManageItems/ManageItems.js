@@ -5,7 +5,7 @@ import './Manageitems.css';
 const ManageItems = () => {
     const [manageitem, setManageitem] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:7000/products')
+        fetch('https://gentle-hollows-65771.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setManageitem(data))
     }, [manageitem])
