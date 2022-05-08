@@ -18,9 +18,7 @@ const ProductDetails = () => {
     // handle descrease 
     const handleUpdatQuantity = () => {
         const updatedQuantity = parseInt(quantity - 1)
-        console.log(updatedQuantity);
         const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
-        console.log(url);
         fetch(url, {
             method: "PUT",
             headers: {
@@ -37,9 +35,7 @@ const ProductDetails = () => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
         const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
-        console.log(updatedQuantity);
         const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
-        console.log(url);
         fetch(url, {
             method: "PUT",
             headers: {
@@ -70,7 +66,7 @@ const ProductDetails = () => {
                         <Card.Text>
                             Quantity:  {products.quantity}
                         </Card.Text>
-                        {products.quantity === null ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity(products._id)} variant="primary" className='bg-warning border-0'>Delivered</Button>}
+                        {products.quantity === 0 ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity(products._id)} variant="primary" className='bg-warning border-0'>Delivered</Button>}
                     </Card.Body>
                 </Card>
             </div>
