@@ -11,7 +11,7 @@ const Products = () => {
     }, [])
     return (
         <div className='container'>
-            <h1 className='text-center text-warning my-3'>Our Products</h1>
+            <h1 className='text-center text-warning mt-3'>Our Products</h1>
             <div className='products-container'>
                 {
                     products.slice(0, 6).map(product => <Product key={product._id} product={product}

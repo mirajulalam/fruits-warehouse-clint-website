@@ -1,11 +1,7 @@
-import axios from 'axios';
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
 const AddItem = () => {
-    const [user] = useAuthState(auth);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -20,9 +16,7 @@ const AddItem = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                if (data.insertedId) {
-                    toast('products added')
-                }
+                toast('New product added')
             })
 
     };

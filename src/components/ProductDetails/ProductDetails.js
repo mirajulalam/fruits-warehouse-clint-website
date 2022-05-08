@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Alert, Button, Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 
 
@@ -15,16 +15,29 @@ const ProductDetails = () => {
             .then(data => setProducts(data))
     }, [products]);
 
+    // handle descrease 
     const handleUpdatQuantity = () => {
-        console.log('update');
+        const newQuantity = parseInt(quantity - 1)
+        const updateQuantity = { newQuantity }
+        const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
+        console.log(url);
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('descrese update ', data);
+            })
     }
     const handleQuantity = (event) => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
         const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
-        console.log(updatedQuantity);
         const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
-        console.log(updatedQuantity)
         fetch(url, {
             method: "PUT",
             headers: {
@@ -35,7 +48,6 @@ const ProductDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('Are you sure update product')
                 event.target.reset()
             })
     }
@@ -56,7 +68,7 @@ const ProductDetails = () => {
                         <Card.Text>
                             Quantity:  {products.quantity}
                         </Card.Text>
-                        {products.quantity === null ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity()} variant="primary" className='bg-warning border-0'>Delivered</Button>}
+                        {products.quantity === null ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity(products._id)} variant="primary" className='bg-warning border-0'>Delivered</Button>}
                     </Card.Body>
                 </Card>
             </div>
