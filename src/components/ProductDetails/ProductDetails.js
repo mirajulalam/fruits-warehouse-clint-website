@@ -17,27 +17,29 @@ const ProductDetails = () => {
 
     // handle descrease 
     const handleUpdatQuantity = () => {
-        const newQuantity = parseInt(quantity - 1)
-        const updateQuantity = { newQuantity }
+        const updatedQuantity = parseInt(quantity - 1)
+        console.log(updatedQuantity);
         const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
         console.log(url);
         fetch(url, {
             method: "PUT",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify(updateQuantity)
+            body: JSON.stringify({ updatedQuantity })
         })
             .then(res => res.json())
             .then(data => {
-                console.log('descrese update ', data);
+                console.log('success', data);
             })
     }
     const handleQuantity = (event) => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
         const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
+        console.log(updatedQuantity);
         const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
+        console.log(url);
         fetch(url, {
             method: "PUT",
             headers: {
