@@ -66,7 +66,7 @@ const ProductDetails = () => {
                         <Card.Text>
                             Quantity:  {products.quantity}
                         </Card.Text>
-                        {products.quantity === 0 ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity(products._id)} variant="primary" className='bg-warning border-0'>Delivered</Button>}
+                        {products.quantity == 0 ? <Button>sold</Button> : <Button onClick={() => handleUpdatQuantity(products._id)} variant="primary" className='bg-warning border-0'>Delivered</Button>}
                     </Card.Body>
                 </Card>
             </div>
