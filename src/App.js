@@ -1,4 +1,6 @@
 import './App.css';
+import { useEffect } from 'react';
+
 import { Routes, Route, Link } from "react-router-dom";
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
@@ -13,7 +15,12 @@ import Footer from './components/Footer/Footer'
 import ManageItems from './components/ManageItems/ManageItems';
 import AddItem from './components/AddItem/AddItem';
 import MyItem from './components/MyItem/MyItem';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div>
       <Header></Header>

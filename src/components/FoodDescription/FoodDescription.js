@@ -6,7 +6,8 @@ const FoodDescription = () => {
         <div className='container food-details'>
             <h1 className='text-center text-warning mb-4'>Fruits good for healts</h1>
             <div className="row">
-                <div className='col-md-6 col-sm-12'>
+                <div className='col-md-6 col-sm-12' data-aos="zoom-in"
+                    data-aos-duration="1000" data-aos-delay="200">
                     <img className='w-100' src={imagesDetails} alt="" />
                 </div>
                 <div className='col-md-6 col-sm-12'>

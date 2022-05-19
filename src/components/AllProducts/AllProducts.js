@@ -18,7 +18,7 @@ const AllProducts = ({ manages }) => {
         }
     }
     return (
-        <div className='d-flex justify-content-center'>
+        <div className='d-flex justify-content-center' >
             <CardGroup>
                 <Card>
                     <Card.Img variant="top" src={picture} />

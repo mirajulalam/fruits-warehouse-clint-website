@@ -5,7 +5,7 @@ import './MyItem.css';
 import MyItemDetail from '../MyItemDetail/MyItemDetail';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import axiosPrivate from '../../api/axiosPrivate';
+import axios from 'axios';
 const MyItem = () => {
     const [user] = useAuthState(auth);
     const [product, setProduct] = useState([]);
@@ -14,9 +14,13 @@ const MyItem = () => {
     useEffect(() => {
         const getProduct = async () => {
             const email = user?.email;
-            const url = `http://localhost:7000/myproducts?email=${email}`;
+            const url = `https://gentle-hollows-65771.herokuapp.com/myproducts?email=${email}`;
             try {
-                const { data } = await axiosPrivate.get(url)
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
                 setProduct(data)
             }
             catch (error) {

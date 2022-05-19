@@ -5,9 +5,10 @@ import auth from './../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 const AddItem = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
-    const [user] = useAuthState(auth)
+    const [user] = useAuthState(auth);
+
     const onSubmit = data => {
-        console.log(data);
+
         const url = `https://gentle-hollows-65771.herokuapp.com/products?email=${user.email}`;
         fetch(url, {
             method: "POST",
@@ -29,13 +30,13 @@ const AddItem = () => {
             <h1 className='text-warning'>Please Add New Products</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
 
-                <input className='mb-2' placeholder='Name' name="name" {...register("name", { required: true })} />
+                <input className='mb-2' placeholder='name' name="name" {...register("name", { required: true })} />
 
                 <input className='mb-2' placeholder='Description' name='description' {...register("description")} />
 
                 <input className='mb-2' placeholder='Price' type="number" name='number' {...register("price")} />
 
-                <input className='mb-2' placeholder='email' type="email" name='email' {...register("email")} />
+                <input className='mb-2' placeholder='Enter email' type="email" name='email' {...register("email")} />
 
                 <input className='mb-2' placeholder='Image url' type="text" {...register("picture")} />
 

@@ -57,8 +57,9 @@ const ProductDescription = () => {
                         </Accordion.Item>
                     </Accordion>
                 </div>
-                <div className='col-sm-12 col-md-6'>
-                    <img className='w-100' src={fruitsImages} alt="" />
+                <div className='col-sm-12 col-md-6' >
+                    <img data-aos="zoom-in"
+                        data-aos-duration="1000" data-aos-delay="200" className='w-100' src={fruitsImages} alt="" />
                 </div>
             </div>
         </div>
