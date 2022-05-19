@@ -4,11 +4,11 @@ import { toast } from 'react-toastify';
 import auth from './../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 const AddItem = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const [user] = useAuthState(auth)
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:7000/products?email=${user.email}`;
+        const url = `https://gentle-hollows-65771.herokuapp.com/products?email=${user.email}`;
         fetch(url, {
             method: "POST",
             headers: {
@@ -20,6 +20,7 @@ const AddItem = () => {
             .then(result => {
                 console.log(result);
                 toast('New product added')
+                reset();
             })
 
     };

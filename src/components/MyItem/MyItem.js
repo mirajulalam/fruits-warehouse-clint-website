@@ -1,19 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './MyItem.css';
 import MyItemDetail from '../MyItemDetail/MyItemDetail';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import axiosPrivate from '../../api/axiosPrivate';
 const MyItem = () => {
     const [user] = useAuthState(auth);
     const [product, setProduct] = useState([]);
+    const navigate = useNavigate()
 
     useEffect(() => {
         const getProduct = async () => {
             const email = user?.email;
             const url = `http://localhost:7000/myproducts?email=${email}`;
-            const { data } = await axios.get(url)
-            setProduct(data)
+            try {
+                const { data } = await axiosPrivate.get(url)
+                setProduct(data)
+            }
+            catch (error) {
+                console.log(error);
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth)
+                    navigate('/login')
+                }
+            }
         }
         getProduct()
     }, [product])
