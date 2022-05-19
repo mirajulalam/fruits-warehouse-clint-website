@@ -11,7 +11,7 @@ const MyItem = () => {
     useEffect(() => {
         const getProduct = async () => {
             const email = user?.email;
-            const url = `https://gentle-hollows-65771.herokuapp.com/products?email=${email}`;
+            const url = `http://localhost:7000/myproducts?email=${email}`;
             const { data } = await axios.get(url)
             setProduct(data)
         }

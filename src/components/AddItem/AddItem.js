@@ -1,11 +1,14 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
+import auth from './../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 const AddItem = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [user] = useAuthState(auth)
     const onSubmit = data => {
         console.log(data);
-        const url = `https://gentle-hollows-65771.herokuapp.com/products`;
+        const url = `http://localhost:7000/products?email=${user.email}`;
         fetch(url, {
             method: "POST",
             headers: {
