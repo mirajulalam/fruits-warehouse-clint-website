@@ -42,7 +42,7 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://gentle-hollows-65771.herokuapp.com/login', { email });
+        const { data } = await axios.post('https://fruits-warehouse.onrender.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true })
     }

@@ -6,7 +6,7 @@ const MyItemDetail = ({ item }) => {
     const handleProductsDelete = id => {
         const checkout = window.confirm('Are you sure you want to delete products');
         if (checkout) {
-            const url = `https://gentle-hollows-65771.herokuapp.com/products/${id}`;
+            const url = `https://fruits-warehouse.onrender.com/products/${id}`;
             fetch(url, {
                 method: "DELETE",
             })

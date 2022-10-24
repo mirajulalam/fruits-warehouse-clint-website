@@ -9,7 +9,7 @@ const AddItem = () => {
 
     const onSubmit = data => {
 
-        const url = `https://gentle-hollows-65771.herokuapp.com/products?email=${user.email}`;
+        const url = `https://fruits-warehouse.onrender.com/products?email=${user.email}`;
         fetch(url, {
             method: "POST",
             headers: {

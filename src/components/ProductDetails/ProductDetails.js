@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const { quantity } = products;
 
     useEffect(() => {
-        const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
+        const url = `https://fruits-warehouse.onrender.com/products/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -18,7 +18,7 @@ const ProductDetails = () => {
     // handle descrease 
     const handleUpdatQuantity = () => {
         const updatedQuantity = parseInt(quantity - 1)
-        const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
+        const url = `https://fruits-warehouse.onrender.com/products/${productId}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -35,7 +35,7 @@ const ProductDetails = () => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
         const updatedQuantity = parseInt(quantity) + parseInt(newQuantity);
-        const url = `https://gentle-hollows-65771.herokuapp.com/products/${productId}`;
+        const url = `https://fruits-warehouse.onrender.com/products/${productId}`;
         fetch(url, {
             method: "PUT",
             headers: {
